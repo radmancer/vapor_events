@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <!--Written and Directed By James Scott McDowell-->
+        <title>Singularity</title>
+        <link rel="stylesheet" href="css/radlab.css">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="css/swipe.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/profile.css">
+    </head>
+    <body class="profilePageBody">
+	<div class="profilePageLayoutGrid">
+        <div id="profile" class="profile"></div>
+        <div id="nameAndAge" class="nameAndAge">Mircama, 888</div>
+        <!--Profile Text Character Limit: 162-->
+        <div id="profileText" class="profileText"></div>
+        <div class="navigation">
+            <div class="global-actions" style="vertical-align:top;">
+                <div class="left-action" onclick="playSound('skip');setTimeout(function(){ window.location='singularity.html'; }, 1500);"><div class="button">&#10007;</div></div>
+                <div class="blackhole-action" onclick="playSound('scream');setTimeout(function(){ window.location='singularity.html'; }, 3000);"><img style="width:10vw;height:10vw;filter:invert(100%);" src="css/images/black_hole.png" /></div>
+                <div class="top-action" onclick="playSound('duck');showModal('matchModal');"><div class="button"><img style="width:10vw;height:10vw;" src="css/images/duck.svg" /></div></div>
+                <div class="right-action" onclick="playSound('like');showModal('matchModal');"><div class="button">&#x2714;</div></div>
+            </div>
+        </div>
+    </div>
+    <div id="matchModal" class="modalGrid">
+        <div id="matchTitle" class="matchTitle centerXY">It's a Match!</div>
+        <div id="matchSubTitle" class="matchSubtitle centerXY">Who didn't see THAT coming?</div>
+        <div class="sendMessage centerXY largeRadius noselect" onclick="showModal('genericModal');playSound('psionic');setTimeout(function(){ hideModal('genericModal'); }, 3500);"><div class="modalButtons">SEND TELEPATHIC MESSAGE</div></div>
+        <div class="keepSwiping centerXY largeRadius noselect" onclick="window.location='singularity.html';"><div class="modalButtons">KEEP SWIPING</div></div>
+    </div>
+    <div id="genericModal" class="genericModal">
+        <div class="telepathicContent smallRadius centerXY"><img style="width:80%;" src="css/images/telepathic_message.gif" /></div>
+        <div class="modalExit centerXY" onclick="hideModal('genericModal');"><div class="closeButton">&#10007;</div></div>
+        <div class="telepathicTitle">SENDING MESSAGE...</div> 
+    </div>
+    <audio id="scream" src="media/BlackholeScream.mp3" autostart="0" style="visibility:hidden;"></audio>
+    <audio id="psionic" src="media/psionic.mp3" autostart="0" style="visibility:hidden;"></audio>
+    <audio id="skip" src="media/skip.mp3" autostart="0" style="visibility:hidden;"></audio>
+    <audio id="like" src="media/Like.mp3" autostart="0" style="visibility:hidden;"></audio>
+    <audio id="duck" src="media/duck.mp3" autostart="0" style="visibility:hidden;"></audio>
+    </body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const joke = urlParams.get("joke");
+        const id = urlParams.get("id");
+        const image = urlParams.get("image");
+        document.getElementById("profile").style.backgroundImage = "url('css/images/" + image + "')";
+        const name = urlParams.get("name");
+        const age = urlParams.get("age");
+        const profileText = urlParams.get("profile");
+        document.getElementById("nameAndAge").innerHTML = name + ", " + age;
+        document.getElementById("profileText").innerHTML = profileText;
+        sessionStorage.id = id;
+        if(joke == "true"){
+            document.getElementById("matchTitle").innerHTML = "So, we lied...";
+            document.getElementById("matchSubTitle").innerHTML = "Aaron is a master of disguise.";
+        }
+    </script>
+    <script src="js/modal.js"></script>
+    <script src="js/media.js"></script>
+    <script>
+        var osType = getMobileOperatingSystem();
+        if(osType != "iOS" && osType != "Android"){
+            //window.location = "mobile_only.html";
+        }
+    </script>
+</html>

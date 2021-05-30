@@ -1,0 +1,86 @@
+.hamburgerMenu{
+    width:79px;
+    height:79px;
+    color:white;
+    background-color:'red';
+}
+/*Centering on both axises only works on divs.*/
+.centerXY{
+    display:flex;
+    /* align horizontal */
+    justify-content:center;
+    /* align vertical */
+    align-items:center;
+}
+.centerDivXY{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.centerX{
+    display:flex;
+    /* align horizontal */
+    justify-content:center;
+}
+.header{
+    top:0px;
+    position:fixed;
+    width:100%;
+    background-color:'black';
+    border-bottom:5px solid black;
+    max-width: initial;
+}
+.spanningRow{
+    max-width: initial;
+}
+.footer{
+    background-color:black;
+    color:white;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+.fullWidth{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial;
+}
+.boxContainer{
+    background-image:url('');
+    background-repeat:no-repeat;
+    background-position:50% 80%;
+    height:225px;
+}
+.smallRadius{
+    border-radius:3vw;
+}
+.largeRadius{
+    border-radius:9vw;
+}
+.flipOverY{
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+.noSelect{
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+.floatingDivContainer {
+    position: relative;
+}
+.floatingDiv {
+    position: absolute;
+    top: -6vw;
+    right: 0px;
+    margin:5vw;
+    font-size: 15vw;
+    color: white;
+}

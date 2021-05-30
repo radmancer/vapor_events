@@ -1,0 +1,21 @@
+.singularityPageBody {
+	height: 100%;
+	width: 100%;
+	display: table;
+	background-image: linear-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,1)), linear-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,1)), radial-gradient(ellipse, #00fd00 1%, black 99%);
+	background-size: 100% 125%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.nameAgeProfession {
+	position:absolute;
+	bottom:0;
+	right:0;
+	text-align: right;
+	font-family:gothamRoundedMedium;
+	font-size:5vw;
+	color:white;
+	padding-right:3vw;
+	padding-bottom:1vh;
+}

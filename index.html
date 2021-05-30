@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <!--Written and Directed By James Scott McDowell-->
+        <title>Singularity</title>
+        <link rel="stylesheet" href="css/radlab.css">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/index.css">
+        <meta name="google-site-verification" content="RW6yUQ8Cf6DKRiYOzA0oGeoYUM7dR9RBh7OxPGTnsyc" />
+    </head>
+    <body class="indexPageBody">
+        <div class="indexPageLayoutGrid">
+            <div class="logoGraphic w3-spin"></div>
+            <div class="logoText centerXY noselect"><span>singularity</span></div>
+            <div class="legalesePart1 centerXY noselect" style="font-family:gothamRoundedLight;color:white">By tapping "okay fine" you hitherforth agree with our</div>
+            <div class="legalesePart2 centerXY noselect" style="font-family:gothamRoundedLight;color:white">
+                <div onclick="showModal('genericModal');" style="text-decoration:underline;">Terms of Service</div>&nbsp;and&nbsp;<a href="https://youtu.be/OMOGaugKpzs?t=15">"Privacy" Policy</a>.
+            </div>
+            <div class="okayFine centerXY largeRadius noselect" onclick="location.href = 'singularity.html';"><span>OKAY FINE</span></div>
+            <div class="loginWith centerXY largeRadius noselect" onclick="location.href = 'singularity.html';"><span>LOG IN WITH SOCIAL SECURITY NUMBER</span></div>
+            <div class="explanation centerXY noselect"><span><a href="https://youtu.be/_wWkAHOph6A">Watch the commercial</a></span></div>
+            <div class="confidentiality centerXY noselect" style="font-family:gothamRoundedLight;color:white">(We won't tell anyone you're doing this.)</div>
+        </div>
+        <div id="genericModal" class="genericModal">
+            <div class="termsAndConditionsText smallRadius">Welcome to the nadir of searching for the basic human needs of
+                love, and understanding. Like a Burger King is to your nutritional health; so too is online dating to
+                your romantic happiness. Surely, one may overcome the expenditures of one’s own time,
+                money and mental energy, by, as they say: “putting yourself out there.” But by the gods! Who has time for
+                THAT guff? So let us begin your thumb-sliding journey into the abject HORROR of the personalizes of men on
+                the internet that you will no doubt encounter.
+            </div>
+            <div class="modalExit centerXY" onclick="document.getElementById('genericModal').style.visibility='hidden';">
+                <div class="closeButton">&#10007;</div>
+            </div>
+            <div class="termsTitle">THE TERMS</div>
+        </div>
+    </body>
+    <script src="js/modal.js"></script>
+    <script>
+        var osType = getMobileOperatingSystem();
+        if(osType != "iOS" && osType != "Android"){
+            window.location = "mobile_only.html";
+        }
+    </script>
+</html>

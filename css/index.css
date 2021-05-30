@@ -1,0 +1,78 @@
+.indexPageBody{
+	background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url("images/0.jpg");
+	background-position: 50% 80%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.indexPageLayoutGrid{
+	display:grid;
+	grid-template-columns:5vw 13vw 10vw 56vw 11vw 5vw;
+	grid-template-rows:26vh 7vh 26vh 2vh 2vh 2vh 8vh 1vh 8vh 6.5vh 1.5vh 10vh;
+}
+.logoGraphic{
+	grid-column-start:3;
+	grid-column-end:4;
+	grid-row-start:2;
+	grid-row-end:3;
+	background-image: url("images/black_hole.png");
+	filter:invert(100%);
+	background-size:10vw;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+.logoText{
+	grid-column-start:4;
+	grid-column-end:5;
+	grid-row-start:2;
+	grid-row-end:3;
+	font-size:10.7vw;
+	padding-bottom:0.7vh;
+}
+.legalesePart1{
+	grid-column-start:1;
+	grid-column-end:7;
+	grid-row-start:4;
+	grid-row-end:5;
+	font-size:2.5vw;
+	font-family:gothamRoundedLight;
+}
+.legalesePart2{
+	grid-column-start:1;
+	grid-column-end:7;
+	grid-row-start:5;
+	grid-row-end:6;
+	font-size:2.5vw;
+	font-family:gothamRoundedLight;
+}
+.okayFine{
+	grid-column-start:2;
+	grid-column-end:6;
+	grid-row-start:7;
+	grid-row-end:8;
+	font-size:4vw;
+	background-image: linear-gradient(to right, rgb(0, 88, 0) , #00bd00);
+}
+.loginWith{
+	grid-column-start:2;
+	grid-column-end:6;
+	grid-row-start:9;
+	grid-row-end:10;
+	font-size:3vw;
+	background-color: transparent;
+	border-style: solid;
+	border-color: white;
+}
+.explanation{
+	grid-column-start:1;
+	grid-column-end:7;
+	grid-row-start:10;
+	grid-row-end:11;
+	font-size:3vw;
+}
+.confidentiality{
+	grid-column-start:1;
+	grid-column-end:7;
+	grid-row-start:11;
+	grid-row-end:12;
+	font-size:3vw;               
+}

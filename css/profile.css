@@ -1,0 +1,49 @@
+.profilePageBody{
+	font-family:gothamRoundedMedium;
+}
+.profile{
+	grid-column-start:1;
+	grid-column-end:5;
+	grid-row-start:1;
+	grid-row-end:2;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.nameAndAge{
+	grid-column-start:1;
+	grid-column-end:5;
+	grid-row-start:2;
+	grid-row-end:3;
+	color:#323232;
+	font-size:5vw;
+	border-bottom-style: solid;
+	border-bottom-color: #f0f0f0;
+	border-width: 1px;
+	padding-top:2vw;
+}
+.profileText{
+	grid-column-start:1;
+	grid-column-end:5;
+	grid-row-start:3;
+	grid-row-end:4;
+	background-color:white;
+	color:#939393;
+	font-size:3vw;
+	padding-top:4vw;
+	border-top-style: solid;
+	border-top-color: #dedede;
+	border-width: 1px;
+	word-wrap: break-word;
+}
+.profilePageLayoutGrid{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-template-rows:45vh 7vh 20vh;
+}
+.navigation{
+	grid-column-start:1;
+	grid-column-end:5;
+	grid-row-start:4;
+	grid-row-end:5;
+}

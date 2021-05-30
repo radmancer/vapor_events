@@ -1,0 +1,49 @@
+.indexPageBody{
+	height: 100%;
+	width: 100%;
+	display: table;
+	background-image: linear-gradient(rgba(0,0,0,0) 65%, rgba(0,0,0,1)), linear-gradient(rgba(0,0,0,0) 10%, rgba(0,0,0,1)), radial-gradient(ellipse, #00fd00 1%, black 99%);
+	background-size: 100% 125%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.indexPageLayoutGrid{
+	display:grid;
+	grid-template-columns:5vw 13vw 10vw 56vw 11vw 5vw;
+	grid-template-rows:20vh 20vh 20vh 7vh 7vh 26vh;
+}
+.logoGraphic{
+	grid-column-start:3;
+	grid-column-end:4;
+	grid-row-start:2;
+	grid-row-end:3;
+	background-image: url("images/black_hole.png");
+	filter:invert(100%);
+	background-size:10vw;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+}
+.logoText{
+	grid-column-start:4;
+	grid-column-end:5;
+	grid-row-start:2;
+	grid-row-end:3;
+	font-size:10.7vw;
+	padding-bottom:0.7vh;
+}
+.messagePart1{
+	grid-column-start:1;
+	grid-column-end:7;
+	grid-row-start:4;
+	grid-row-end:5;
+	font-size:2.5vw;
+	font-family:gothamRoundedLight;
+}
+.messagePart2{
+	grid-column-start:1;
+	grid-column-end:7;
+	grid-row-start:5;
+	grid-row-end:6;
+	font-size:2.5vw;
+	font-family:gothamRoundedLight;
+}

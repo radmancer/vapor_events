@@ -5,61 +5,97 @@
     </head>
     <body style="margin:0;padding:0;">
         <div class="grid">
-            <div class="video"></div>
-            <div class="row1"></div>
-            <div class="row2"></div>
-            <div class="row3"></div>
-            <div class="row4"></div>
-            <div class="row5"></div>
-            <div class="modal"></div>
-            <div class="cell-1_1 centerXY">1_1</div>
+            <div class="cell-1_1 centerXY"><input style="width:100%;height:80%;" type="button" onclick="shrink();" value="scroll" /></div>
             <div class="cell-1_2 centerXY">1_2</div>
             <div class="cell-1_3 centerXY">1_3</div>
             <div class="cell-1_4 centerXY">1_4</div>
             <div class="cell-1_5 centerXY">1_5</div>
-            <div class="cell-1_6 centerXY">1_6</div>
             <div class="cell-2_1 centerXY">2_1</div>
             <div class="cell-2_2 centerXY">2_2</div>
             <div class="cell-2_3 centerXY">2_3</div>
             <div class="cell-2_4 centerXY">2_4</div>
             <div class="cell-2_5 centerXY">2_5</div>
-            <div class="cell-2_6 centerXY">2_6</div>
             <div class="cell-3_1 centerXY">3_1</div>
             <div class="cell-3_2 centerXY">3_2</div>
             <div class="cell-3_3 centerXY">3_3</div>
             <div class="cell-3_4 centerXY">3_4</div>
             <div class="cell-3_5 centerXY">3_5</div>
-            <div class="cell-3_6 centerXY">3_6</div>
             <div class="cell-4_1 centerXY">4_1</div>
             <div class="cell-4_2 centerXY">4_2</div>
             <div class="cell-4_3 centerXY">4_3</div>
             <div class="cell-4_4 centerXY">4_4</div>
             <div class="cell-4_5 centerXY">4_5</div>
-            <div class="cell-4_6 centerXY">4_6</div>
             <div class="cell-5_1 centerXY">5_1</div>
             <div class="cell-5_2 centerXY">5_2</div>
             <div class="cell-5_3 centerXY">5_3</div>
             <div class="cell-5_4 centerXY">5_4</div>
             <div class="cell-5_5 centerXY">5_5</div>
-            <div class="cell-5_6 centerXY">5_6</div>
             <div class="cell-6_1 centerXY">6_1</div>
             <div class="cell-6_2 centerXY">6_2</div>
             <div class="cell-6_3 centerXY">6_3</div>
             <div class="cell-6_4 centerXY">6_4</div>
             <div class="cell-6_5 centerXY">6_5</div>
-            <div class="cell-6_6 centerXY">6_6</div>
             <div class="cell-7_1 centerXY">7_1</div>
             <div class="cell-7_2 centerXY">7_2</div>
             <div class="cell-7_3 centerXY">7_3</div>
             <div class="cell-7_4 centerXY">7_4</div>
             <div class="cell-7_5 centerXY">7_5</div>
-            <div class="cell-7_6 centerXY">7_6</div>
-            <div class="cell-8_1 centerXY">8_1</div>
-            <div class="cell-8_2 centerXY">8_2</div>
-            <div class="cell-8_3 centerXY">8_3</div>
-            <div class="cell-8_4 centerXY">8_4</div>
-            <div class="cell-8_5 centerXY">8_5</div>
-            <div class="cell-8_6 centerXY">8_6</div>
         </div>
     </body>
+    <script>
+        var firstColumnWidth = 25;
+        var lastColumnWidth = 0;
+        for(var i = 1; i < 7; i++){
+            document.getElementsByClassName("cell-" + i + "_2")[0].style.backgroundColor = "red";
+            document.getElementsByClassName("cell-" + i + "_5")[0].style.backgroundColor = "blue";
+        }
+        function shrink(){
+            firstColumnWidth--;
+            lastColumnWidth++;
+            if(firstColumnWidth == 0){
+                firstColumnWidth = 25;
+                lastColumnWidth = 0;
+                for(var i = 2; i < 7; i++){
+                    document.getElementsByClassName("cell-" + i + "_2")[0].style.backgroundColor = "red";
+                    var grid =  "display:-ms-grid;";
+                        grid += "display:grid;";
+                        grid += "-ms-grid-rows:30vh 14vh 14vh 14vh 14vh 14vh 0vh;";
+                        grid += "-ms-grid-columns:25vw " + firstColumnWidth + "vw 25vw 25vw " + lastColumnWidth + "vw;";
+                        grid += "grid-template:";
+                        grid += "'1_1   1_2   1_3   1_4   1_5' 30vh";
+                        grid += "'2_1   2_2   2_3   2_4   2_5' 14vh";
+                        grid += "'3_1   3_2   3_3   3_4   3_5' 14vh";
+                        grid += "'4_1   4_2   4_3   4_4   4_5' 14vh";
+                        grid += "'5_1   5_2   5_3   5_4   5_5' 14vh";
+                        grid += "'6_1   6_2   6_3   6_4   6_5' 14vh";
+                        grid += "'7_1   7_2   7_3   7_4   7_5' 0vh /";
+                        grid += "25vw   " + firstColumnWidth + "vw   25vw   25vw   " + lastColumnWidth + "vw;";
+                        grid += "background-color:green;";
+                    document.getElementsByClassName("grid")[0].style.cssText = grid;
+                    document.getElementsByClassName("cell-" + i + "_2")[0].style.width = firstColumnWidth + "vw";
+                    document.getElementsByClassName("cell-" + i + "_5")[0].style.width = lastColumnWidth + "vw";
+                }      
+            }
+            for(var i = 1; i < 7; i++){
+                document.getElementsByClassName("cell-" + i + "_2")[0].style.backgroundColor = "red";
+                var grid =  "display:-ms-grid;";
+                    grid += "display:grid;";
+                    grid += "-ms-grid-rows:30vh 14vh 14vh 14vh 14vh 14vh 0vh;";
+                    grid += "-ms-grid-columns:25vw " + firstColumnWidth + "vw 25vw 25vw " + lastColumnWidth + "vw;";
+                    grid += "grid-template:";
+                    grid += "'1_1   1_2   1_3   1_4   1_5' 30vh";
+                    grid += "'2_1   2_2   2_3   2_4   2_5' 14vh";
+                    grid += "'3_1   3_2   3_3   3_4   3_5' 14vh";
+                    grid += "'4_1   4_2   4_3   4_4   4_5' 14vh";
+                    grid += "'5_1   5_2   5_3   5_4   5_5' 14vh";
+                    grid += "'6_1   6_2   6_3   6_4   6_5' 14vh";
+                    grid += "'7_1   7_2   7_3   7_4   7_5' 0vh /";
+                    grid += "25vw   " + firstColumnWidth + "vw   25vw   25vw   " + lastColumnWidth + "vw;";
+                    grid += "background-color:green;";
+                document.getElementsByClassName("grid")[0].style.cssText = grid;
+                document.getElementsByClassName("cell-" + i + "_2")[0].style.width = firstColumnWidth + "vw";
+                document.getElementsByClassName("cell-" + i + "_5")[0].style.width = lastColumnWidth + "vw";
+            }
+        }
+    </script>
 </html>

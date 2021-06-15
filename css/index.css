@@ -2,74 +2,17 @@
 .grid{
     display:-ms-grid;
     display:grid;
-    -ms-grid-rows:7vh 23vh 14vh 14vh 14vh 14vh 7vh 7vh;
-    -ms-grid-columns:5vw 20vw 25vw 25vw 20vw 5vw;
+    -ms-grid-rows:30vh 14vh 14vh 14vh 14vh 14vh 0vh;
+    -ms-grid-columns:25vw 25vw 25vw 25vw 0vw;
     grid-template:
-    "1_1   1_2   1_3   1_4   1_5   1_6" 7vh
-    "2_1   2_2   2_3   2_4   2_5   2_6" 23vh
-    "3_1   3_2   3_3   3_4   3_5   3_6" 14vh
-    "4_1   4_2   4_3   4_4   4_5   4_6" 14vh
-    "5_1   5_2   5_3   5_4   5_5   5_6" 14vh
-    "6_1   6_2   6_3   6_4   6_5   6_6" 14vh
-    "7_1   7_2   7_3   7_4   7_5   7_6" 7vh
-    "8_1   8_2   8_3   8_4   8_5   8_6" 7vh /
-    5vw   20vw   25vw   25vw   20vw   5vw;
-}
-.video{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:1;
-	grid-row-end:3;
-    background-color: red;
-}
-.row1{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:3;
-	grid-row-end:4;
-    background-color: orange;
-}
-.row2{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:4;
-	grid-row-end:5;
-    background-color: yellow;
-}
-.row3{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:5;
-	grid-row-end:6;
-    background-color: green;
-}
-.row4{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:6;
-	grid-row-end:7;
-    background-color: blue;   
-}
-.row5{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:7;
-	grid-row-end:9;
-    background-color: indigo;   
-}
-.modal{
-	grid-column-start:2;
-	grid-column-end:6;
-	grid-row-start:2;
-	grid-row-end:8;
-    background-color: violet;   
-}
-.cell-1_1-2_6{
-	grid-column-start:1;
-	grid-column-end:7;
-	grid-row-start:1;
-	grid-row-end:3;
-    background-color: red;
+    "1_1   1_2   1_3   1_4   1_5" 30vh
+    "2_1   2_2   2_3   2_4   2_5" 14vh
+    "3_1   3_2   3_3   3_4   3_5" 14vh
+    "4_1   4_2   4_3   4_4   4_5" 14vh
+    "5_1   5_2   5_3   5_4   5_5" 14vh
+    "6_1   6_2   6_3   6_4   6_5" 14vh
+    "7_1   7_2   7_3   7_4   7_5" 0vh /
+    25vw   25vw   25vw   25vw   0vw;
 }
 .cell-1_1{
     -ms-grid-row: 1;
@@ -77,8 +20,8 @@
     grid-row: 1;
     grid-column: 1;
     grid-area: 1_1;
-    height: 7vh;
-    width:  5vw;
+    height: 30vh;
+    width:  25vw;
 }
 .cell-1_2{
     -ms-grid-row: 1;
@@ -86,8 +29,8 @@
     grid-row: 1;
     grid-column: 2;
     grid-area: 1_2;
-    height: 7vh;
-    width:  20vw;
+    height: 30vh;
+    width:  25vw;
 }
 .cell-1_3{
     -ms-grid-row: 1;
@@ -95,7 +38,7 @@
     grid-row: 1;
     grid-column: 3;
     grid-area: 1_3;
-    height: 7vh;
+    height: 30vh;
     width:  25vw;
 }
 .cell-1_4{
@@ -104,7 +47,7 @@
     grid-row: 1;
     grid-column: 4;
     grid-area: 1_4;
-    height: 7vh;
+    height: 30vh;
     width:  25vw;
 }
 .cell-1_5{
@@ -113,17 +56,8 @@
     grid-row: 1;
     grid-column: 5;
     grid-area: 1_5;
-    height: 7vh;
-    width:  20vw;
-}
-.cell-1_6{
-    -ms-grid-row: 1;
-    -ms-grid-column: 6;
-    grid-row: 1;
-    grid-column: 6;
-    grid-area: 1_6;
-    height: 7vh;
-    width:  5vw;
+    height: 30vh;
+    width:  0vw;
 }
 .cell-2_1{
     -ms-grid-row: 2;
@@ -131,8 +65,8 @@
     grid-row: 2;
     grid-column: 1;
     grid-area: 2_1;
-    height: 23vh;
-    width:  5vw;
+    height: 14vh;
+    width:  25vw;
 }
 .cell-2_2{
     -ms-grid-row: 2;
@@ -140,8 +74,8 @@
     grid-row: 2;
     grid-column: 2;
     grid-area: 2_2;
-    height: 23vh;
-    width:  20vw;
+    height: 14vh;
+    width:  25vw;
 }
 .cell-2_3{
     -ms-grid-row: 2;
@@ -149,7 +83,7 @@
     grid-row: 2;
     grid-column: 3;
     grid-area: 2_3;
-    height: 23vh;
+    height: 14vh;
     width:  25vw;
 }
 .cell-2_4{
@@ -158,7 +92,7 @@
     grid-row: 2;
     grid-column: 4;
     grid-area: 2_4;
-    height: 23vh;
+    height: 14vh;
     width:  25vw;
 }
 .cell-2_5{
@@ -167,17 +101,8 @@
     grid-row: 2;
     grid-column: 5;
     grid-area: 2_5;
-    height: 23vh;
-    width:  20vw;
-}
-.cell-2_6{
-    -ms-grid-row: 2;
-    -ms-grid-column: 6;
-    grid-row: 2;
-    grid-column: 6;
-    grid-area: 2_6;
-    height: 23vh;
-    width:  5vw;
+    height: 14vh;
+    width:  0vw;
 }
 .cell-3_1{
     -ms-grid-row: 3;
@@ -186,7 +111,7 @@
     grid-column: 1;
     grid-area: 3_1;
     height: 14vh;
-    width:  5vw;
+    width:  25vw;
 }
 .cell-3_2{
     -ms-grid-row: 3;
@@ -195,7 +120,7 @@
     grid-column: 2;
     grid-area: 3_2;
     height: 14vh;
-    width:  20vw;
+    width:  25vw;
 }
 .cell-3_3{
     -ms-grid-row: 3;
@@ -222,16 +147,7 @@
     grid-column: 5;
     grid-area: 3_5;
     height: 14vh;
-    width:  20vw;
-}
-.cell-3_6{
-    -ms-grid-row: 3;
-    -ms-grid-column: 6;
-    grid-row: 3;
-    grid-column: 6;
-    grid-area: 3_6;
-    height: 14vh;
-    width:  5vw;
+    width:  0vw;
 }
 .cell-4_1{
     -ms-grid-row: 4;
@@ -240,7 +156,7 @@
     grid-column: 1;
     grid-area: 4_1;
     height: 14vh;
-    width:  5vw;
+    width:  25vw;
 }
 .cell-4_2{
     -ms-grid-row: 4;
@@ -249,7 +165,7 @@
     grid-column: 2;
     grid-area: 4_2;
     height: 14vh;
-    width:  20vw;
+    width:  25vw;
 }
 .cell-4_3{
     -ms-grid-row: 4;
@@ -276,16 +192,7 @@
     grid-column: 5;
     grid-area: 4_5;
     height: 14vh;
-    width:  20vw;
-}
-.cell-4_6{
-    -ms-grid-row: 4;
-    -ms-grid-column: 6;
-    grid-row: 4;
-    grid-column: 6;
-    grid-area: 4_6;
-    height: 14vh;
-    width:  5vw;
+    width:  0vw;
 }
 .cell-5_1{
     -ms-grid-row: 5;
@@ -294,7 +201,7 @@
     grid-column: 1;
     grid-area: 5_1;
     height: 14vh;
-    width:  5vw;
+    width:  25vw;
 }
 .cell-5_2{
     -ms-grid-row: 5;
@@ -303,7 +210,7 @@
     grid-column: 2;
     grid-area: 5_2;
     height: 14vh;
-    width:  20vw;
+    width:  25vw;
 }
 .cell-5_3{
     -ms-grid-row: 5;
@@ -330,16 +237,7 @@
     grid-column: 5;
     grid-area: 5_5;
     height: 14vh;
-    width:  20vw;
-}
-.cell-5_6{
-    -ms-grid-row: 5;
-    -ms-grid-column: 6;
-    grid-row: 5;
-    grid-column: 6;
-    grid-area: 5_6;
-    height: 14vh;
-    width:  5vw;
+    width:  0vw;
 }
 .cell-6_1{
     -ms-grid-row: 6;
@@ -348,7 +246,7 @@
     grid-column: 1;
     grid-area: 6_1;
     height: 14vh;
-    width:  5vw;
+    width:  25vw;
 }
 .cell-6_2{
     -ms-grid-row: 6;
@@ -357,7 +255,7 @@
     grid-column: 2;
     grid-area: 6_2;
     height: 14vh;
-    width:  20vw;
+    width:  25vw;
 }
 .cell-6_3{
     -ms-grid-row: 6;
@@ -384,16 +282,7 @@
     grid-column: 5;
     grid-area: 6_5;
     height: 14vh;
-    width:  20vw;
-}
-.cell-6_6{
-    -ms-grid-row: 6;
-    -ms-grid-column: 6;
-    grid-row: 6;
-    grid-column: 6;
-    grid-area: 6_6;
-    height: 14vh;
-    width:  5vw;
+    width:  0vw;
 }
 .cell-7_1{
     -ms-grid-row: 7;
@@ -401,8 +290,8 @@
     grid-row: 7;
     grid-column: 1;
     grid-area: 7_1;
-    height: 7vh;
-    width:  5vw;
+    height: 0vh;
+    width:  25vw;
 }
 .cell-7_2{
     -ms-grid-row: 7;
@@ -410,8 +299,8 @@
     grid-row: 7;
     grid-column: 2;
     grid-area: 7_2;
-    height: 7vh;
-    width:  20vw;
+    height: 0vh;
+    width:  25vw;
 }
 .cell-7_3{
     -ms-grid-row: 7;
@@ -419,7 +308,7 @@
     grid-row: 7;
     grid-column: 3;
     grid-area: 7_3;
-    height: 7vh;
+    height: 0vh;
     width:  25vw;
 }
 .cell-7_4{
@@ -428,7 +317,7 @@
     grid-row: 7;
     grid-column: 4;
     grid-area: 7_4;
-    height: 7vh;
+    height: 0vh;
     width:  25vw;
 }
 .cell-7_5{
@@ -437,69 +326,6 @@
     grid-row: 7;
     grid-column: 5;
     grid-area: 7_5;
-    height: 7vh;
-    width:  20vw;
-}
-.cell-7_6{
-    -ms-grid-row: 7;
-    -ms-grid-column: 6;
-    grid-row: 7;
-    grid-column: 6;
-    grid-area: 7_6;
-    height: 7vh;
-    width:  5vw;
-}
-.cell-8_1{
-    -ms-grid-row: 8;
-    -ms-grid-column: 1;
-    grid-row: 8;
-    grid-column: 1;
-    grid-area: 8_1;
-    height: 7vh;
-    width:  5vw;
-}
-.cell-8_2{
-    -ms-grid-row: 8;
-    -ms-grid-column: 2;
-    grid-row: 8;
-    grid-column: 2;
-    grid-area: 8_2;
-    height: 7vh;
-    width:  20vw;
-}
-.cell-8_3{
-    -ms-grid-row: 8;
-    -ms-grid-column: 3;
-    grid-row: 8;
-    grid-column: 3;
-    grid-area: 8_3;
-    height: 7vh;
-    width:  25vw;
-}
-.cell-8_4{
-    -ms-grid-row: 8;
-    -ms-grid-column: 4;
-    grid-row: 8;
-    grid-column: 4;
-    grid-area: 8_4;
-    height: 7vh;
-    width:  25vw;
-}
-.cell-8_5{
-    -ms-grid-row: 8;
-    -ms-grid-column: 5;
-    grid-row: 8;
-    grid-column: 5;
-    grid-area: 8_5;
-    height: 7vh;
-    width:  20vw;
-}
-.cell-8_6{
-    -ms-grid-row: 8;
-    -ms-grid-column: 6;
-    grid-row: 8;
-    grid-column: 6;
-    grid-area: 8_6;
-    height: 7vh;
-    width:  5vw;
+    height: 0vh;
+    width:  0vw;
 }

@@ -9,43 +9,43 @@
             <div class="cell-1_2 centerXY">1_2</div>
             <div class="cell-1_3 centerXY">1_3</div>
             <div class="cell-1_4 centerXY">1_4</div>
-            <div class="cell-1_5 centerXY">1_5</div>
+            <div class="cell-1_5 centerXY"></div>
             <div class="cell-2_1 centerXY">2_1</div>
             <div class="cell-2_2 centerXY">2_2</div>
             <div class="cell-2_3 centerXY">2_3</div>
             <div class="cell-2_4 centerXY">2_4</div>
-            <div class="cell-2_5 centerXY">2_5</div>
+            <div class="cell-2_5 centerXY"></div>
             <div class="cell-3_1 centerXY">3_1</div>
             <div class="cell-3_2 centerXY">3_2</div>
             <div class="cell-3_3 centerXY">3_3</div>
             <div class="cell-3_4 centerXY">3_4</div>
-            <div class="cell-3_5 centerXY">3_5</div>
+            <div class="cell-3_5 centerXY"></div>
             <div class="cell-4_1 centerXY">4_1</div>
             <div class="cell-4_2 centerXY">4_2</div>
             <div class="cell-4_3 centerXY">4_3</div>
             <div class="cell-4_4 centerXY">4_4</div>
-            <div class="cell-4_5 centerXY">4_5</div>
+            <div class="cell-4_5 centerXY"></div>
             <div class="cell-5_1 centerXY">5_1</div>
             <div class="cell-5_2 centerXY">5_2</div>
             <div class="cell-5_3 centerXY">5_3</div>
             <div class="cell-5_4 centerXY">5_4</div>
-            <div class="cell-5_5 centerXY">5_5</div>
+            <div class="cell-5_5 centerXY"></div>
             <div class="cell-6_1 centerXY">6_1</div>
             <div class="cell-6_2 centerXY">6_2</div>
             <div class="cell-6_3 centerXY">6_3</div>
             <div class="cell-6_4 centerXY">6_4</div>
-            <div class="cell-6_5 centerXY">6_5</div>
+            <div class="cell-6_5 centerXY"></div>
             <div class="cell-7_1 centerXY">7_1</div>
             <div class="cell-7_2 centerXY">7_2</div>
             <div class="cell-7_3 centerXY">7_3</div>
             <div class="cell-7_4 centerXY">7_4</div>
-            <div class="cell-7_5 centerXY">7_5</div>
+            <div class="cell-7_5 centerXY"></div>
         </div>
     </body>
     <script>
         var firstColumnWidth = 25;
         var lastColumnWidth = 0;
-        for(var i = 1; i < 7; i++){
+        for(var i = 1; i < 8; i++){
             document.getElementsByClassName("cell-" + i + "_2")[0].style.backgroundColor = "red";
             document.getElementsByClassName("cell-" + i + "_5")[0].style.backgroundColor = "blue";
         }
@@ -55,7 +55,7 @@
             if(firstColumnWidth == 0){
                 firstColumnWidth = 25;
                 lastColumnWidth = 0;
-                for(var i = 2; i < 7; i++){
+                for(var i = 2; i < 8; i++){
                     document.getElementsByClassName("cell-" + i + "_2")[0].style.backgroundColor = "red";
                     var grid =  "display:-ms-grid;";
                         grid += "display:grid;";
@@ -76,7 +76,7 @@
                     document.getElementsByClassName("cell-" + i + "_5")[0].style.width = lastColumnWidth + "vw";
                 }      
             }
-            for(var i = 1; i < 7; i++){
+            for(var i = 1; i < 8; i++){
                 document.getElementsByClassName("cell-" + i + "_2")[0].style.backgroundColor = "red";
                 var grid =  "display:-ms-grid;";
                     grid += "display:grid;";

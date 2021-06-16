@@ -14,6 +14,16 @@
     "7_1   7_2   7_3   7_4   7_5" 0vh /
     25vw   25vw   25vw   25vw   0vw;
 }
+.cell-1_1-1_5{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-row: 1;
+    grid-column: 1;
+    grid-area: 1_1   1_2   1_3   1_4   1_5;
+    height: 30vh;
+    width:  100vw;
+    background-color: fuchsia;
+}
 .cell-1_1{
     -ms-grid-row: 1;
     -ms-grid-column: 1;

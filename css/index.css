@@ -24,6 +24,16 @@
     width:  100vw;
     background-color: fuchsia;
 }
+.cell-2_1-2_5{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-row: 2;
+    grid-column: 1;
+    grid-area: 2_1   2_2   2_3   2_4   2_5;
+    height: 14vh;
+    width:  100vw;
+    background-color: cyan;
+}
 .cell-1_1{
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -338,4 +348,10 @@
     grid-area: 7_5;
     height: 0vh;
     width:  0vw;
+}
+.timeBar {
+    display: flex;
+}
+.timeCell {
+    flex-grow: 1;
 }

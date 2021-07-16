@@ -4,104 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Event Guide</title>
     <style>
-        .horizontalContainer {
-          position: absolute;
-          z-index: 0;
-          height: 100vh;
-          width: 100vw;
-          display:flex;
-          flex-direction: column;
-          justify-content: center;
+        html{
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
         }
-        .verticalContainer {
-          position: absolute;
-          z-index: 1;
-          height: 100vh;
-          width: 100vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
+        body{
+            height: 100%;
+            overflow: hidden;
+            margin:0;
+            padding:0;
+            position:relative;
+            background-color: black;
+        }
+
+        /*The horizontal plane and its children.*/
+        .horizontalContainer {
+            position: absolute;
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            display:flex;
+            /* vertically center the event slider */
+            align-items: center;
         }
         .eventSlider {
-            display: flex;
-            flex-direction: row;
-            height:60vh;
-        }
-        .venueSlider {
-            display: flex;
-            flex-direction: column;
-            width:70vw;
+            height: 60vh;
+            width: 100%;
+            display:flex;
+            flex-direction:row;
         }
         .leftCardContainer {
             position:relative;
-            flex-grow: 1;
-            max-width: 15vw;
-            max-height: 60vh;
+            width:15vw;
+            height:60vh;
             background-color:red;
-        }
-        .horizontalMiddleCardContainer {
-            position:relative;
-            flex-grow: 1;
-            max-width: 70vw;
-            max-height: 60vh;
-            background-color:green;
-        }
-        .rightCardContainer {
-            position:relative;
-            flex-grow: 1;
-            max-width: 15vw;
-            max-height: 60vh;
-            background-color:blue;
-        }
-        .topCardContainer {
-            position:relative;
-            flex-grow: 1;
-            max-width: 70vw;
-            max-height: 20vh;
-            background-color:red;
-        }
-        .verticalMiddleCardContainer {
-            position:relative;
-            flex-grow: 1;
-            max-width: 70vw;
-            max-height: 60vh;
-            background-color:green;
-        }
-        .bottomCardContainer {
-            position:relative;
-            flex-grow: 1;
-            max-width: 70vw;
-            max-height: 20vh;
-            background-color:blue;
-        }
-        .topCard{
-            width:65vw;
-            height:55vh;
-            background-color:white;
-            position:absolute;
-            z-index:2;
-            left:2.5vw;
-            bottom:2.5vh;
-        }
-        .bottomCard{
-            width:65vw;
-            height:55vh;
-            background-color:white;
-            position:absolute;
-            z-index:2;
-            left:2.5vw;
-            top:2.5vh;
-        }
-        .rightCard{
-            width:65vw;
-            height:55vh;
-            background-color:white;
-            position:absolute;
-            z-index:2;
-            left:2.5vw;
-            top:2.5vh;
         }
         .leftCard{
             width:65vw;
@@ -112,29 +51,99 @@
             right:2.5vw;
             top:2.5vh;
         }
+        .horizontalMiddleCardContainer {
+            position:relative;
+            width:70vw;
+            height:60vh;
+            background-color:green;
+        }
         .horizontalMiddleCard{
+            width:65vw;
+            height:55vh;
+            background-color:magenta;
+            position:absolute;
+            z-index:2;
+            right:2.5vw;
+            top:2.5vh;
+        }
+        .rightCardContainer {
+            position:relative;
+            width: 15vw;
+            height: 60vh;
+            background-color:blue;
+        }
+        .rightCard{
             width:65vw;
             height:55vh;
             background-color:white;
             position:absolute;
             z-index:2;
-            right:2.5vw;
+            left:2.5vw;
             top:2.5vh;
+        }
+
+        /*The vertical plane and its children.*/
+        .verticalContainer {
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            display:flex;
+            /* horizontally center the event slider */
+            justify-content: center;
+        }
+        .venueSlider {
+            display: flex;
+            flex-direction: column;
+            width:70vw;
+            height:100%;
+            background-color:aquamarine;
+        }
+        .topCardContainer {
+            position:relative;
+            width: 70vw;
+            height: 20vh;
+            background-color:red;
+        }
+        .topCard{
+            width:65vw;
+            height:55vh;
+            background-color:white;
+            position:absolute;
+            z-index:2;
+            left:2.5vw;
+            bottom:2.5vh;
+        }
+        .verticalMiddleCardContainer {
+            position:relative;
+            width: 70vw;
+            height: 60vh;
+            background-color:green;
         }
         .verticalMiddleCard{
             width:65vw;
             height:55vh;
-            background-color:white;
+            /*height:calc(65vw * 1.618);*/
+            background-color:cyan;
             position:absolute;
             z-index:2;
             right:2.5vw;
             top:2.5vh;
         }
-        body{
-            margin:0;
-            padding:0;
+        .bottomCardContainer {
             position:relative;
-            background-color: black;
+            width: 70vw;
+            height: 20vh;
+            background-color:blue;
+        }
+        .bottomCard{
+            width:65vw;
+            height:55vh;
+            background-color:white;
+            position:absolute;
+            z-index:2;
+            left:2.5vw;
+            top:2.5vh;
         }
     </style>
     <link rel="stylesheet" type="text/css" href="css/index.css">

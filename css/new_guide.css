@@ -1,0 +1,143 @@
+html{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+}
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    background-color:black;
+}
+
+/*
+The horizontal plane and its children.
+*/
+.horizontalContainer {
+    z-index:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:absolute;
+    /* vertically center the event slider */
+    align-items:center;
+}
+.eventSlider {
+    width:100%;
+    height:60vh;
+    display:flex;
+    flex-direction:row;
+}
+.leftCardContainer {
+    width:15vw;
+    height:60vh;
+    position:relative;
+    background-color:red;
+}
+.leftCard{
+    z-index:2;
+    top:2.5vh;
+    width:65vw;
+    height:55vh;
+    right:2.5vw;
+    position:absolute;
+    background-color:white;
+}
+.horizontalMiddleCardContainer {
+    width:70vw;
+    height:60vh;
+    position:relative;
+    background-color:green;
+}
+.horizontalMiddleCard{
+    z-index:2;
+    top:2.5vh;
+    width:65vw;
+    height:55vh;
+    right:2.5vw;
+    position:absolute;
+    background-color:magenta;
+}
+.rightCardContainer {
+    width:15vw;
+    height:60vh;
+    position:relative;
+    background-color:blue;
+}
+.rightCard{
+    z-index:2;
+    top:2.5vh;
+    left:2.5vw;
+    width:65vw;
+    height:55vh;
+    position:absolute;
+    background-color:white;
+}
+
+/*
+The vertical plane and its children.
+*/
+.verticalContainer {
+    z-index:1;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:absolute;
+    /* horizontally center the event slider */
+    justify-content:center;
+}
+.venueSlider {
+    width:70vw;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    background-color:aquamarine;
+}
+.topCardContainer {
+    width:70vw;
+    height:20vh;
+    position:relative;
+    background-color:red;
+}
+.topCard{
+    z-index:2;
+    left:2.5vw;
+    width:65vw;
+    height:55vh;
+    bottom:2.5vh;
+    position:absolute;
+    background-color:white;
+}
+.verticalMiddleCardContainer {
+    width:70vw;
+    height:60vh;
+    position:relative;
+    background-color:green;
+}
+.verticalMiddleCard{
+    z-index:2;
+    top:2.5vh;
+    width:65vw;
+    height:55vh;
+    right:2.5vw;
+    /*height:calc(65vw * 1.618);*/
+    position:absolute;
+    background-color:cyan;
+}
+.bottomCardContainer {
+    width:70vw;
+    height:20vh;
+    position:relative;
+    background-color:blue;
+}
+.bottomCard{
+    z-index:2;
+    top:2.5vh;
+    left:2.5vw;
+    width:65vw;
+    height:55vh;
+    position:absolute;
+    background-color:white;
+}

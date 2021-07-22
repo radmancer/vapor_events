@@ -1,6 +1,6 @@
 :root {
     --card-margin:5vw;
-    --card-width:70vw;
+    --card-width:20vw;
     --golden-ratio:1.618;
     --card-height:calc(var(--card-width) * var(--golden-ratio));
 }
@@ -47,12 +47,20 @@ The horizontal plane and its children.
     margin-right:var(--card-margin);
     left:calc(((100vw - var(--card-width)) / 2) - var(--card-width) - var(--card-margin));
 }
+.preLeftCard{
+    margin-right:var(--card-margin);
+    left:calc(((100vw - var(--card-width)) / 2) - var(--card-width) - var(--card-margin) - var(--card-width) - var(--card-margin));
+}
 .horizontalMiddleCard{
     left:calc((100vw - var(--card-width)) / 2);
 }
 .rightCard{
     margin-left:var(--card-margin);
     left:calc(100vw - ((100vw - var(--card-width)) / 2));
+}
+.postRightCard{
+    margin-left:var(--card-margin);
+    left:calc((100vw - ((100vw - var(--card-width)) / 2)) + var(--card-width) + var(--card-margin));
 }
 
 /*
@@ -74,6 +82,10 @@ The vertical plane and its children.
     flex-direction:column;
     position:relative;
 }
+.preTopCard{
+    margin-bottom:var(--card-margin);
+    top:calc(((100vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin) - var(--card-height) - var(--card-margin));
+}
 .topCard{
     margin-bottom:var(--card-margin);
     top:calc(((100vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin));
@@ -81,6 +93,10 @@ The vertical plane and its children.
 .verticalMiddleCard{
     top:calc((100vh - var(--card-height)) / 2);
     /* visibility:hidden; */
+}
+.postBottomCard{
+    margin-top:var(--card-margin);
+    top:calc(((100vh - var(--card-height)) / 2) + var(--card-height) + var(--card-height) + var(--card-margin));
 }
 .bottomCard{
     margin-top:var(--card-margin);

@@ -1,0 +1,99 @@
+html{
+    margin:0;
+    height:100%;
+    overflow:hidden;
+}
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    background-color:black;
+}
+
+/*
+The horizontal plane and its children.
+*/
+.horizontalContainer {
+    z-index:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:absolute;
+    /* vertically center the event slider */
+    align-items:center;
+}
+.eventSlider {
+    width:100%;
+    height:60vh;
+    display:flex;
+    flex-direction:row;
+    position:relative;
+}
+.leftCard{
+    width:70vw;
+    height:60vh;
+    position:absolute;
+    background-color:red;
+    margin-right:2vw;
+    left:-57vw;
+}
+.horizontalMiddleCard{
+    width:70vw;
+    height:60vh;
+    position:absolute;
+    background-color:green;
+    left:15vw; /*70 / 4*/
+}
+.rightCard{
+    width:70vw;
+    height:60vh;
+    position:absolute;
+    background-color:blue;
+    margin-left:2vw;
+    left:85vw; /*100 - (70 / 4)*/
+}
+
+/*
+The vertical plane and its children.
+*/
+.verticalContainer {
+    z-index:1;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:absolute;
+    /* horizontally center the event slider */
+    justify-content:center;
+}
+.venueSlider {
+    width:70vw;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+.topCard{
+    top:calc(-40vh - 2vw); /*100 - 60*/
+    width:70vw;
+    height:60vh;
+    position:absolute;
+    background-color:white;
+    margin-bottom:2vw;
+}
+.verticalMiddleCard{
+    top:calc(20vh); /*(100 - 60) / 2*/
+    width:70vw;
+    height:60vh;
+    position:absolute;
+    background-color:white;
+    margin-bottom:2vw;
+}
+.bottomCard{
+    top:80vh; /*((100 - 60) / 2) + 60*/
+    width:70vw;
+    height:60vh;
+    position:absolute;
+    background-color:white;
+    margin-top:2vw;
+}

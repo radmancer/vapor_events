@@ -7,9 +7,9 @@
     <title>Event Guide</title>
     <link rel="stylesheet" type="text/css" href="css/new_guide.css">
 </head>
-<body>
+<body id="swipezone">
     <div class="horizontalContainer">
-        <div class="eventSlider">
+        <div id="eventSlider" class="eventSlider">
             <div class="card preLeftCard"></div>
             <div class="card leftCard"></div>
             <div class="card horizontalMiddleCard"></div>
@@ -21,10 +21,18 @@
         <div class="venueSlider">
             <div class="card preTopCard"></div>
             <div class="card topCard"></div>
-            <div class="card verticalMiddleCard"></div>
+            <div id="verticalMiddleCard" class="card verticalMiddleCard"></div>
             <div class="card bottomCard"></div>
             <div class="card postBottomCard"></div>
         </div>
     </div>
 </body>
+<script>
+    var style = getComputedStyle(document.body);
+    var cardWidth = parseInt(style.getPropertyValue("--card-width").slice(0, -2));
+    var goldenRatio = style.getPropertyValue("--golden-ratio");
+    var cardHeight = cardWidth * goldenRatio;
+    var cardMargin = parseInt(style.getPropertyValue("--card-margin").slice(0, -2));
+</script>
+<script src="js/swipe.js"></script>
 </html>

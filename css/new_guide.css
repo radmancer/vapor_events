@@ -15,8 +15,57 @@ body{
     padding:0;
     height:100%;
     overflow:hidden;
+    background-color: silver;
+}
+.sliderBase{
     position:relative;
     background-color:silver;
+    height:85vh;
+}
+.venueBar{
+    height:15vh;
+    background-color:darkgray;
+    width:100%;
+    z-index:2;
+    position:relative; /*JSM: I'm not sure why this has to be position relative, but test it in all browsers.*/
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+
+    display:flex;
+    flex-direction:row;
+    position:relative;
+
+    /* vertically center the event slider */
+    align-items:center;
+}
+.venueLogo{
+    width:12vh;
+    height:12vh;
+    top:1.5vh;
+    left:1.5vh;
+    border-radius:10px;
+    background: black;
+    position:absolute;
+}
+.venueName{
+    left:15vh;
+    position:absolute;
+    font-size:9vw;
+}
+@font-face {
+	font-family:gothamRoundedMedium;
+	src: url("fonts/GothamRoundedMedium_21022.ttf");
+}
+
+@font-face {
+	font-family:gothamRoundedLight;
+	src: url("fonts/GothamRounded-Light.otf");
+}
+
+span{
+	font-family:gothamRoundedMedium;
+	color:white;
 }
 
 /*
@@ -90,21 +139,21 @@ The vertical plane and its children.
 }
 .preTopCard{
     margin-bottom:var(--card-margin);
-    top:calc(((100vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin) - var(--card-height) - var(--card-margin));
+    top:calc(((85vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin) - var(--card-height) - var(--card-margin));
 }
 .topCard{
     margin-bottom:var(--card-margin);
-    top:calc(((100vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin));
+    top:calc(((85vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin));
 }
 .verticalMiddleCard{
-    top:calc((100vh - var(--card-height)) / 2);
+    top:calc((85vh - var(--card-height)) / 2);
     /* visibility:hidden; */
 }
 .postBottomCard{
     margin-top:var(--card-margin);
-    top:calc(((100vh - var(--card-height)) / 2) + var(--card-height) + var(--card-height) + var(--card-margin));
+    top:calc(((85vh - var(--card-height)) / 2) + var(--card-height) + var(--card-height) + var(--card-margin));
 }
 .bottomCard{
     margin-top:var(--card-margin);
-    top:calc(((100vh - var(--card-height)) / 2) + var(--card-height));
+    top:calc(((85vh - var(--card-height)) / 2) + var(--card-height));
 }

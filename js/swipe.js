@@ -65,6 +65,22 @@ swipedetect(el, function(swipedir){
             }, 1);
         })(1);
     }
+    else if(swipedir == "down"){
+        var element = document.getElementById("venueSlider");
+        (function scrollUp(i) {
+            element.style.top = i + "px";
+            setTimeout(function () {
+                //console.log(cardHeight);
+                if (i < cardHeight) {          // If i > 0, keep going
+                    i = i + 3;
+                    scrollUp(i);       // Call the loop again, and pass it the current value of i
+                }
+                else{
+                    element.style.top = "0vh";
+                }
+            }, 1);
+        })(1);
+    }
     else if(swipedir == "left"){
         var element = document.getElementById("eventSlider");
         var middleCard = document.getElementById("verticalMiddleCard");

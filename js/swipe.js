@@ -49,17 +49,20 @@ function swipedetect(el, callback){
 
 var el = document.getElementById('swipezone');
 swipedetect(el, function(swipedir){
-    // swipedir contains either "none", "left", "right", "top", or "down"
-    //el.innerHTML = 'Swiped <span style="color:yellow;margin: 0 5px;">' + swipedir +'</span>';
     if(swipedir == "up"){
+        var element = document.getElementById("venueSlider");
         (function scrollUp(i) {
-            scrollVertical();
+            element.style.top = -i + "px";
             setTimeout(function () {
-                if (i < cardHeight + cardMargin) {          // If i > 0, keep going
-                    i = i + 1;
+                //console.log(cardHeight);
+                if (i < cardHeight) {          // If i > 0, keep going
+                    i = i + 3;
                     scrollUp(i);       // Call the loop again, and pass it the current value of i
                 }
-            }, 50);
+                else{
+                    element.style.top = "0vh";
+                }
+            }, 1);
         })(1);
     }
     else if(swipedir == "left"){
@@ -71,7 +74,6 @@ swipedetect(el, function(swipedir){
             setTimeout(function () {
                 if (i < cardWidth + cardMargin) {          // If i > 0, keep going
                     i = i + 1;
-                    console.log(i);
                     scrollLeft(i);       // Call the loop again, and pass it the current value of i
                 }
                 else{

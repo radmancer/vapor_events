@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="verticalContainer">
-            <div class="venueSlider">
+            <div id="venueSlider" class="venueSlider">
                 <div class="card preTopCard"></div>
                 <div class="card topCard"></div>
                 <div id="verticalMiddleCard" class="card verticalMiddleCard"></div>
@@ -34,10 +34,16 @@
     </div>
 </body>
 <script>
+    function outerHeight(el) {
+        var height = el.offsetHeight;
+        var style = getComputedStyle(el);
+        height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+        return height;
+    }
     var style = getComputedStyle(document.body);
     var cardWidth = parseInt(style.getPropertyValue("--card-width").slice(0, -2));
     var goldenRatio = style.getPropertyValue("--golden-ratio");
-    var cardHeight = cardWidth * goldenRatio;
+    var cardHeight = outerHeight(document.getElementsByClassName("bottomCard")[0]);
     var cardMargin = parseInt(style.getPropertyValue("--card-margin").slice(0, -2));
 </script>
 <script src="js/swipe.js"></script>

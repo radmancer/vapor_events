@@ -1,3 +1,26 @@
+.neumorphic {
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+      -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+    font-size: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1.3rem;
+    display: flex;
+  }
+
+  .neumorphic--pressed {
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+      inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .variation2 {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .variation2.pressed {
+    color: #5ab9ea;
+  }  
+
 :root {
     --card-margin:5vw;
     --card-width:70vw;
@@ -40,13 +63,15 @@ body{
     align-items:center;
 }
 .venueLogo{
-    width:12vh;
-    height:12vh;
+    width:6vh;
+    height:6vh;
     top:1.5vh;
     left:1.5vh;
-    border-radius:10px;
-    background: black;
     position:absolute;
+    background-image: url("images/japanese_stamp.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 .venueName{
     left:15vh;
@@ -55,17 +80,16 @@ body{
 }
 @font-face {
 	font-family:gothamRoundedMedium;
-	src: url("fonts/GothamRoundedMedium_21022.ttf");
-}
-
-@font-face {
-	font-family:gothamRoundedLight;
-	src: url("fonts/GothamRounded-Light.otf");
+	src: url("fonts/nunito/Nunito-Regular.ttf");
 }
 
 span{
 	font-family:gothamRoundedMedium;
-	color:white;
+	color:rgb(206, 206, 206);
+    text-shadow:
+    -6px -6px 8px rgba(216, 216, 216, 0.582),
+    6px 6px 8px rgba(0,0,0,0.2);
+    caret-color:#262626;
 }
 
 /*

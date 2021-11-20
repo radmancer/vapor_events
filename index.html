@@ -1,50 +1,50 @@
-<html>
-    <head>
-        <title>Grid Master</title>
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-    </head>
-    <body style="margin:0;padding:0;">
-        <div class="grid">
-            <div class="cell-1_1-1_5 centerXY" style="font-size:10vh;z-index:1;">
-                <input style="width:50%;height:100%;" type="button" onclick="shrinkHorizontal();" value="horizontal" />
-                <input style="width:50%;height:100%;" type="button" onclick="shrinkVertical();" value="vertical" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Guide</title>
+    <link rel="stylesheet" type="text/css" href="css/new_guide.css">
+</head>
+<body>
+    <div class="venueBar">
+        <div class="neumorphic neumorphic--pressed variation2 pressed venueLogo"></div>
+        <div class="venueName"><span>The Blind Tiger</span></div>
+    </div>
+    <div id="swipezone" class="sliderBase">
+        <div class="horizontalContainer">
+            <div id="eventSlider" class="eventSlider">
+                <div class="card preLeftCard"></div>
+                <div class="card leftCard"></div>
+                <div class="card horizontalMiddleCard"></div>
+                <div class="card rightCard"></div>
+                <div class="card postRightCard"></div>
             </div>
-            <div class="cell-1_1 centerXY"></div>
-            <div class="cell-1_2 centerXY">1_2</div>
-            <div class="cell-1_3 centerXY">1_3</div>
-            <div class="cell-1_4 centerXY">1_4</div>
-            <div class="cell-1_5 centerXY"></div>
-            <div class="cell-2_1 centerXY">2_1</div>
-            <div class="cell-2_2 centerXY">2_2</div>
-            <div class="cell-2_3 centerXY">2_3</div>
-            <div class="cell-2_4 centerXY">2_4</div>
-            <div class="cell-2_5 centerXY"></div>
-            <div class="cell-3_1 centerXY">3_1</div>
-            <div class="cell-3_2 centerXY">3_2</div>
-            <div class="cell-3_3 centerXY">3_3</div>
-            <div class="cell-3_4 centerXY">3_4</div>
-            <div class="cell-3_5 centerXY"></div>
-            <div class="cell-4_1 centerXY">4_1</div>
-            <div class="cell-4_2 centerXY">4_2</div>
-            <div class="cell-4_3 centerXY">4_3</div>
-            <div class="cell-4_4 centerXY">4_4</div>
-            <div class="cell-4_5 centerXY"></div>
-            <div class="cell-5_1 centerXY">5_1</div>
-            <div class="cell-5_2 centerXY">5_2</div>
-            <div class="cell-5_3 centerXY">5_3</div>
-            <div class="cell-5_4 centerXY">5_4</div>
-            <div class="cell-5_5 centerXY"></div>
-            <div class="cell-6_1 centerXY">6_1</div>
-            <div class="cell-6_2 centerXY">6_2</div>
-            <div class="cell-6_3 centerXY">6_3</div>
-            <div class="cell-6_4 centerXY">6_4</div>
-            <div class="cell-6_5 centerXY"></div>
-            <div class="cell-7_1 centerXY"></div>
-            <div class="cell-7_2 centerXY"></div>
-            <div class="cell-7_3 centerXY"></div>
-            <div class="cell-7_4 centerXY"></div>
-            <div class="cell-7_5 centerXY"></div>
         </div>
-    </body>
-    <script src="js/guid_grid.js"></script> 
+        <div class="verticalContainer">
+            <div id="venueSlider" class="venueSlider">
+                <div class="card preTopCard"></div>
+                <div class="card topCard"></div>
+                <div id="verticalMiddleCard" class="card verticalMiddleCard"></div>
+                <div class="card bottomCard"></div>
+                <div class="card postBottomCard"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function outerHeight(el) {
+        var height = el.offsetHeight;
+        var style = getComputedStyle(el);
+        height += parseInt(style.marginTop) + parseInt(style.marginBottom);
+        return height;
+    }
+    var style = getComputedStyle(document.body);
+    var cardWidth = parseInt(style.getPropertyValue("--card-width").slice(0, -2));
+    var goldenRatio = style.getPropertyValue("--golden-ratio");
+    var cardHeight = outerHeight(document.getElementsByClassName("bottomCard")[0]);
+    var cardMargin = parseInt(style.getPropertyValue("--card-margin").slice(0, -2));
+</script>
+<script src="js/swipe.js"></script>
 </html>

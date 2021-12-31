@@ -1,341 +1,184 @@
-.centerXY{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}
-.grid{
-    display:-ms-grid;
-    display:grid;
-    -ms-grid-rows:30vh 14vh 14vh 14vh 14vh 14vh 0vh;
-    -ms-grid-columns:25vw 25vw 25vw 25vw 0vw;
-    grid-template:
-    "1_1   1_2   1_3   1_4   1_5" 30vh
-    "2_1   2_2   2_3   2_4   2_5" 14vh
-    "3_1   3_2   3_3   3_4   3_5" 14vh
-    "4_1   4_2   4_3   4_4   4_5" 14vh
-    "5_1   5_2   5_3   5_4   5_5" 14vh
-    "6_1   6_2   6_3   6_4   6_5" 14vh
-    "7_1   7_2   7_3   7_4   7_5" 0vh /
-    25vw   25vw   25vw   25vw   0vw;
+.neumorphic {
+    box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2),
+      -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
+    font-size: 5rem;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 1.3rem;
+    display: flex;
+  }
+
+  .neumorphic--pressed {
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+      inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .variation2 {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .variation2.pressed {
+    color: #5ab9ea;
+  }  
+
+:root {
+    --card-margin:5vw;
+    --card-width:70vw;
+    --golden-ratio:1.6180;
+    --card-height:calc(var(--card-width) * var(--golden-ratio));
+    --card-corner:10px;
 }
-.cell-1_1-1_5{
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-row: 1;
-    grid-column: 1;
-    grid-area: 1_1   1_2   1_3   1_4   1_5;
-    height: 30vh;
-    width:  100vw;
-    background-color: fuchsia;
+html{
+    margin:0;
+    height:100%;
+    overflow:hidden;
 }
-.cell-1_1{
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-row: 1;
-    grid-column: 1;
-    grid-area: 1_1;
-    height: 30vh;
-    width:  25vw;
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow:hidden;
+    background-color: silver;
+    position:relative;
+    height:100vh;
 }
-.cell-1_2{
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-row: 1;
-    grid-column: 2;
-    grid-area: 1_2;
-    height: 30vh;
-    width:  25vw;
+/* .sliderBase{
+    position:relative;
+    background-color:silver;
+    height:85vh;
+} */
+.venueBar{
+    height:15vh;
+    background-color:darkgray;
+    width:100%;
+    z-index:2;
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),-8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+
+    display:flex;
+    flex-direction:row;
+    position:absolute;
+
+    /* vertically center the event slider */
+    align-items:center;
 }
-.cell-1_3{
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-row: 1;
-    grid-column: 3;
-    grid-area: 1_3;
-    height: 30vh;
-    width:  25vw;
+.venueLogo{
+    width:6vh;
+    height:6vh;
+    top:1.5vh;
+    left:1.5vh;
+    position:absolute;
+    background-image: url("images/japanese_stamp.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
-.cell-1_4{
-    -ms-grid-row: 1;
-    -ms-grid-column: 4;
-    grid-row: 1;
-    grid-column: 4;
-    grid-area: 1_4;
-    height: 30vh;
-    width:  25vw;
+.venueName{
+    left:15vh;
+    position:absolute;
+    font-size:9vw;
 }
-.cell-1_5{
-    -ms-grid-row: 1;
-    -ms-grid-column: 5;
-    grid-row: 1;
-    grid-column: 5;
-    grid-area: 1_5;
-    height: 30vh;
-    width:  0vw;
+@font-face {
+	font-family:gothamRoundedMedium;
+	src: url("fonts/nunito/Nunito-Regular.ttf");
 }
-.cell-2_1{
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-row: 2;
-    grid-column: 1;
-    grid-area: 2_1;
-    height: 14vh;
-    width:  25vw;
+
+span{
+	font-family:gothamRoundedMedium;
+	color:rgb(206, 206, 206);
+    text-shadow:
+    -6px -6px 8px rgba(216, 216, 216, 0.582),
+    6px 6px 8px rgba(0,0,0,0.2);
+    caret-color:#262626;
 }
-.cell-2_2{
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-row: 2;
-    grid-column: 2;
-    grid-area: 2_2;
-    height: 14vh;
-    width:  25vw;
+
+/*
+The horizontal plane and its children.
+*/
+.horizontalContainer {
+    z-index:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:absolute;
+    /* vertically center the event slider */
+    align-items:center;
 }
-.cell-2_3{
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-row: 2;
-    grid-column: 3;
-    grid-area: 2_3;
-    height: 14vh;
-    width:  25vw;
+.eventSlider {
+    width:100%;
+    height:var(--card-height);
+    display:flex;
+    flex-direction:row;
+    position:relative;
 }
-.cell-2_4{
-    -ms-grid-row: 2;
-    -ms-grid-column: 4;
-    grid-row: 2;
-    grid-column: 4;
-    grid-area: 2_4;
-    height: 14vh;
-    width:  25vw;
+.card{
+    width:var(--card-width);
+    height:var(--card-height);
+    position:absolute;
+    border-radius: var(--card-corner);
+
+    background: silver;
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+     -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    border-radius: var(--card-corner);
 }
-.cell-2_5{
-    -ms-grid-row: 2;
-    -ms-grid-column: 5;
-    grid-row: 2;
-    grid-column: 5;
-    grid-area: 2_5;
-    height: 14vh;
-    width:  0vw;
+.leftCard{
+    margin-right:var(--card-margin);
+    left:calc(((100vw - var(--card-width)) / 2) - var(--card-width) - var(--card-margin));
 }
-.cell-3_1{
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-row: 3;
-    grid-column: 1;
-    grid-area: 3_1;
-    height: 14vh;
-    width:  25vw;
+.preLeftCard{
+    margin-right:var(--card-margin);
+    left:calc(((100vw - var(--card-width)) / 2) - var(--card-width) - var(--card-margin) - var(--card-width) - var(--card-margin));
 }
-.cell-3_2{
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
-    grid-row: 3;
-    grid-column: 2;
-    grid-area: 3_2;
-    height: 14vh;
-    width:  25vw;
+.horizontalMiddleCard{
+    left:calc((100vw - var(--card-width)) / 2);
 }
-.cell-3_3{
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    grid-row: 3;
-    grid-column: 3;
-    grid-area: 3_3;
-    height: 14vh;
-    width:  25vw;
+.rightCard{
+    margin-left:var(--card-margin);
+    left:calc(100vw - ((100vw - var(--card-width)) / 2));
 }
-.cell-3_4{
-    -ms-grid-row: 3;
-    -ms-grid-column: 4;
-    grid-row: 3;
-    grid-column: 4;
-    grid-area: 3_4;
-    height: 14vh;
-    width:  25vw;
+.postRightCard{
+    margin-left:var(--card-margin);
+    left:calc((100vw - ((100vw - var(--card-width)) / 2)) + var(--card-width) + var(--card-margin));
 }
-.cell-3_5{
-    -ms-grid-row: 3;
-    -ms-grid-column: 5;
-    grid-row: 3;
-    grid-column: 5;
-    grid-area: 3_5;
-    height: 14vh;
-    width:  0vw;
+
+/*
+The vertical plane and its children.
+*/
+.verticalContainer {
+    z-index:1;
+    width:100%;
+    height:100%;
+    display:flex;
+    position:absolute;
+    /* horizontally center the event slider */
+    justify-content:center;
 }
-.cell-4_1{
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-row: 4;
-    grid-column: 1;
-    grid-area: 4_1;
-    height: 14vh;
-    width:  25vw;
+.venueSlider {
+    width:var(--card-width);
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    position:relative;
 }
-.cell-4_2{
-    -ms-grid-row: 4;
-    -ms-grid-column: 2;
-    grid-row: 4;
-    grid-column: 2;
-    grid-area: 4_2;
-    height: 14vh;
-    width:  25vw;
+.preTopCard{
+    margin-bottom:var(--card-margin);
+    top:calc(((100vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin) - var(--card-height) - var(--card-margin));
 }
-.cell-4_3{
-    -ms-grid-row: 4;
-    -ms-grid-column: 3;
-    grid-row: 4;
-    grid-column: 3;
-    grid-area: 4_3;
-    height: 14vh;
-    width:  25vw;
+.topCard{
+    margin-bottom:var(--card-margin);
+    top:calc(((100vh - var(--card-height)) / 2) - var(--card-height) - var(--card-margin));
 }
-.cell-4_4{
-    -ms-grid-row: 4;
-    -ms-grid-column: 4;
-    grid-row: 4;
-    grid-column: 4;
-    grid-area: 4_4;
-    height: 14vh;
-    width:  25vw;
+.verticalMiddleCard{
+    top:calc((100vh - var(--card-height)) / 2);
+    /* visibility:hidden; */
 }
-.cell-4_5{
-    -ms-grid-row: 4;
-    -ms-grid-column: 5;
-    grid-row: 4;
-    grid-column: 5;
-    grid-area: 4_5;
-    height: 14vh;
-    width:  0vw;
+.postBottomCard{
+    margin-top:var(--card-margin);
+    top:calc(((100vh - var(--card-height)) / 2) + var(--card-height) + var(--card-height) + var(--card-margin));
 }
-.cell-5_1{
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-row: 5;
-    grid-column: 1;
-    grid-area: 5_1;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-5_2{
-    -ms-grid-row: 5;
-    -ms-grid-column: 2;
-    grid-row: 5;
-    grid-column: 2;
-    grid-area: 5_2;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-5_3{
-    -ms-grid-row: 5;
-    -ms-grid-column: 3;
-    grid-row: 5;
-    grid-column: 3;
-    grid-area: 5_3;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-5_4{
-    -ms-grid-row: 5;
-    -ms-grid-column: 4;
-    grid-row: 5;
-    grid-column: 4;
-    grid-area: 5_4;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-5_5{
-    -ms-grid-row: 5;
-    -ms-grid-column: 5;
-    grid-row: 5;
-    grid-column: 5;
-    grid-area: 5_5;
-    height: 14vh;
-    width:  0vw;
-}
-.cell-6_1{
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    grid-row: 6;
-    grid-column: 1;
-    grid-area: 6_1;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-6_2{
-    -ms-grid-row: 6;
-    -ms-grid-column: 2;
-    grid-row: 6;
-    grid-column: 2;
-    grid-area: 6_2;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-6_3{
-    -ms-grid-row: 6;
-    -ms-grid-column: 3;
-    grid-row: 6;
-    grid-column: 3;
-    grid-area: 6_3;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-6_4{
-    -ms-grid-row: 6;
-    -ms-grid-column: 4;
-    grid-row: 6;
-    grid-column: 4;
-    grid-area: 6_4;
-    height: 14vh;
-    width:  25vw;
-}
-.cell-6_5{
-    -ms-grid-row: 6;
-    -ms-grid-column: 5;
-    grid-row: 6;
-    grid-column: 5;
-    grid-area: 6_5;
-    height: 14vh;
-    width:  0vw;
-}
-.cell-7_1{
-    -ms-grid-row: 7;
-    -ms-grid-column: 1;
-    grid-row: 7;
-    grid-column: 1;
-    grid-area: 7_1;
-    height: 0vh;
-    width:  25vw;
-}
-.cell-7_2{
-    -ms-grid-row: 7;
-    -ms-grid-column: 2;
-    grid-row: 7;
-    grid-column: 2;
-    grid-area: 7_2;
-    height: 0vh;
-    width:  25vw;
-}
-.cell-7_3{
-    -ms-grid-row: 7;
-    -ms-grid-column: 3;
-    grid-row: 7;
-    grid-column: 3;
-    grid-area: 7_3;
-    height: 0vh;
-    width:  25vw;
-}
-.cell-7_4{
-    -ms-grid-row: 7;
-    -ms-grid-column: 4;
-    grid-row: 7;
-    grid-column: 4;
-    grid-area: 7_4;
-    height: 0vh;
-    width:  25vw;
-}
-.cell-7_5{
-    -ms-grid-row: 7;
-    -ms-grid-column: 5;
-    grid-row: 7;
-    grid-column: 5;
-    grid-area: 7_5;
-    height: 0vh;
-    width:  0vw;
+.bottomCard{
+    margin-top:var(--card-margin);
+    top:calc(((100vh - var(--card-height)) / 2) + var(--card-height));
 }

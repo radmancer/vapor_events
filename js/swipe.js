@@ -51,6 +51,10 @@ var el = document.getElementById('swipezone');
 swipedetect(el, function(swipedir){
     if(swipedir == "up"){
         var element = document.getElementById("venueSlider");
+        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
+        verticalMiddleCard.style.visibility = "visible";
+        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
+        horizontalMiddleCard.style.visibility = "hidden";
         (function scrollUp(i) {
             element.style.top = -i + "px";
             setTimeout(function () {
@@ -61,12 +65,18 @@ swipedetect(el, function(swipedir){
                 }
                 else{
                     element.style.top = "0vh";
+                    verticalMiddleCard.style.visibility = "hidden";
+                    horizontalMiddleCard.style.visibility = "visible";
                 }
             }, 1);
         })(1);
     }
     else if(swipedir == "down"){
         var element = document.getElementById("venueSlider");
+        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
+        verticalMiddleCard.style.visibility = "visible";
+        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
+        horizontalMiddleCard.style.visibility = "hidden";
         (function scrollUp(i) {
             element.style.top = i + "px";
             setTimeout(function () {
@@ -77,14 +87,18 @@ swipedetect(el, function(swipedir){
                 }
                 else{
                     element.style.top = "0vh";
+                    verticalMiddleCard.style.visibility = "hidden";
+                    horizontalMiddleCard.style.visibility = "visible";
                 }
             }, 1);
         })(1);
     }
     else if(swipedir == "left"){
         var element = document.getElementById("eventSlider");
-        var middleCard = document.getElementById("verticalMiddleCard");
-        middleCard.style.visibility = "hidden";
+        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
+        verticalMiddleCard.style.visibility = "hidden";
+        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
+        horizontalMiddleCard.style.visibility = "visible";
         (function scrollLeft(i) {
             element.style.left = -i + "vw";
             setTimeout(function () {
@@ -94,15 +108,18 @@ swipedetect(el, function(swipedir){
                 }
                 else{
                     element.style.left = "0vw";
-                    middleCard.style.visibility = "visible";
+                    verticalMiddleCard.style.visibility = "visible";
+                    horizontalMiddleCard.style.visibility = "hidden";
                 }
             }, 6);
         })(1);
     }
     else if(swipedir == "right"){
         var element = document.getElementById("eventSlider");
-        var middleCard = document.getElementById("verticalMiddleCard");
-        middleCard.style.visibility = "hidden";
+        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
+        verticalMiddleCard.style.visibility = "hidden";
+        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
+        horizontalMiddleCard.style.visibility = "visible";
         (function scrollRight(i) {
             element.style.left = i + "vw";
             setTimeout(function () {
@@ -113,7 +130,8 @@ swipedetect(el, function(swipedir){
                 }
                 else{
                     element.style.left = "0vw";
-                    middleCard.style.visibility = "visible";
+                    verticalMiddleCard.style.visibility = "visible";
+                    horizontalMiddleCard.style.visibility = "hidden";
                 }
             }, 6);
         })(1);

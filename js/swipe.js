@@ -1,3 +1,6 @@
+var swipeVerticalSpeed = 6;
+var swipeHorizontalSpeed = 2;
+
 // credit: http://www.javascriptkit.com/javatutors/touchevents2.shtml
 function swipedetect(el, callback){
     var touchsurface = el,
@@ -6,7 +9,7 @@ function swipedetect(el, callback){
     startY,
     distX,
     distY,
-    threshold = 150, //required min distance traveled to be considered swipe
+    threshold = 50, //required min distance traveled to be considered swipe
     restraint = 100, // maximum distance allowed at the same time in perpendicular direction
     allowedTime = 300, // maximum time allowed to travel that distance
     elapsedTime,
@@ -60,7 +63,7 @@ swipedetect(el, function(swipedir){
             setTimeout(function () {
                 //console.log(cardHeight);
                 if (i < cardHeight) {          // If i > 0, keep going
-                    i = i + 3;
+                    i = i + swipeVerticalSpeed;
                     scrollUp(i);       // Call the loop again, and pass it the current value of i
                 }
                 else{
@@ -82,7 +85,7 @@ swipedetect(el, function(swipedir){
             setTimeout(function () {
                 //console.log(cardHeight);
                 if (i < cardHeight) {          // If i > 0, keep going
-                    i = i + 3;
+                    i = i + swipeVerticalSpeed;
                     scrollUp(i);       // Call the loop again, and pass it the current value of i
                 }
                 else{
@@ -103,7 +106,7 @@ swipedetect(el, function(swipedir){
             element.style.left = -i + "vw";
             setTimeout(function () {
                 if (i < cardWidth + cardMargin) {          // If i > 0, keep going
-                    i = i + 1;
+                    i = i + swipeHorizontalSpeed;
                     scrollLeft(i);       // Call the loop again, and pass it the current value of i
                 }
                 else{
@@ -124,7 +127,7 @@ swipedetect(el, function(swipedir){
             element.style.left = i + "vw";
             setTimeout(function () {
                 if (i < cardWidth + cardMargin) {          // If i > 0, keep going
-                    i = i + 1;
+                    i = i + swipeHorizontalSpeed;
                     console.log(i);
                     scrollRight(i);       // Call the loop again, and pass it the current value of i
                 }

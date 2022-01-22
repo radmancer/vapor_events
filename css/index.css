@@ -24,6 +24,9 @@
     --golden-ratio:1.6180;
     --card-height:calc(var(--card-width) * var(--golden-ratio));
     --card-corner:10px;
+    --cardImage-margin:3vw;
+    --cardImage-width:calc(var(--card-width) - var(--cardImage-margin) * 2);
+    --cardDescription-height:calc(var(--card-height) - var(--card-width));
 }
 html{
     margin:0;
@@ -116,6 +119,22 @@ The horizontal plane and its children.
     box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
     border-radius: var(--card-corner);
+}
+.cardImage{
+    position:relative;
+    left:var(--cardImage-margin);
+    top:var(--cardImage-margin);
+    width:var(--cardImage-width);
+    height:var(--cardImage-width);
+    background-color: red;
+}
+.cardDescription{
+    position:relative;
+    left:var(--cardImage-margin);
+    top:calc(var(--cardImage-margin) * 2);
+    height:calc(var(--cardDescription-height) - var(--cardImage-margin));
+    width:var(--cardImage-width);
+    background-color: green;
 }
 .leftCard{
     margin-right:var(--card-margin);

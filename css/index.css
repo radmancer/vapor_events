@@ -126,7 +126,7 @@ The horizontal plane and its children.
     top:var(--cardImage-margin);
     width:var(--cardImage-width);
     height:var(--cardImage-width);
-    background-color: red;
+    object-fit: cover;
 }
 .cardDescription{
     position:relative;

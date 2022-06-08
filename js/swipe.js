@@ -1,6 +1,9 @@
 var swipeVerticalSpeed = 6;
 var swipeHorizontalSpeed = 2;
 
+var verticalSwipe = false;
+var horizontalSwipe = false;
+
 // credit: http://www.javascriptkit.com/javatutors/touchevents2.shtml
 function swipedetect(el, callback){
     var touchsurface = el,
@@ -53,11 +56,17 @@ function swipedetect(el, callback){
 var el = document.getElementById('swipezone');
 swipedetect(el, function(swipedir){
     if(swipedir == "up"){
+        verticalSwipe = true;
+        horizontalSwipe = false;
         var element = document.getElementById("venueSlider");
+
+        //Makes horizontal middle card active after swipe up.
         var verticalMiddleCard = document.getElementById("verticalMiddleCard");
         verticalMiddleCard.style.visibility = "visible";
         var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
         horizontalMiddleCard.style.visibility = "hidden";
+
+
         (function scrollUp(i) {
             element.style.top = -i + "px";
             setTimeout(function () {
@@ -71,15 +80,20 @@ swipedetect(el, function(swipedir){
                     verticalMiddleCard.style.visibility = "hidden";
                     horizontalMiddleCard.style.visibility = "visible";
                 }
-            }, 1);
+            }, 20);
         })(1);
     }
     else if(swipedir == "down"){
+        verticalSwipe = true;
+        horizontalSwipe = false;
         var element = document.getElementById("venueSlider");
+
+        //Makes horizontal middle card active after swipe up.
         var verticalMiddleCard = document.getElementById("verticalMiddleCard");
         verticalMiddleCard.style.visibility = "visible";
         var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
         horizontalMiddleCard.style.visibility = "hidden";
+
         (function scrollUp(i) {
             element.style.top = i + "px";
             setTimeout(function () {
@@ -93,15 +107,21 @@ swipedetect(el, function(swipedir){
                     verticalMiddleCard.style.visibility = "hidden";
                     horizontalMiddleCard.style.visibility = "visible";
                 }
-            }, 1);
+            }, 20);
         })(1);
     }
     else if(swipedir == "left"){
+        verticalSwipe = false;
+        horizontalSwipe = true;
         var element = document.getElementById("eventSlider");
+
+        //Makes vertical middle card active after swipe up.
         var verticalMiddleCard = document.getElementById("verticalMiddleCard");
         verticalMiddleCard.style.visibility = "hidden";
         var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
         horizontalMiddleCard.style.visibility = "visible";
+
+
         (function scrollLeft(i) {
             element.style.left = -i + "vw";
             setTimeout(function () {
@@ -114,10 +134,12 @@ swipedetect(el, function(swipedir){
                     verticalMiddleCard.style.visibility = "visible";
                     horizontalMiddleCard.style.visibility = "hidden";
                 }
-            }, 6);
+            }, 30);
         })(1);
     }
     else if(swipedir == "right"){
+        verticalSwipe = false;
+        horizontalSwipe = true;
         var element = document.getElementById("eventSlider");
         var verticalMiddleCard = document.getElementById("verticalMiddleCard");
         verticalMiddleCard.style.visibility = "hidden";
@@ -136,7 +158,7 @@ swipedetect(el, function(swipedir){
                     verticalMiddleCard.style.visibility = "visible";
                     horizontalMiddleCard.style.visibility = "hidden";
                 }
-            }, 6);
+            }, 30);
         })(1);
     }
 });

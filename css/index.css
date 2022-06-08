@@ -195,3 +195,6 @@ The vertical plane and its children.
     margin-top:var(--card-margin);
     top:calc(((100vh - var(--card-height)) / 2) + var(--card-height));
 }
+.cardDescription{
+    text-align: right;
+}

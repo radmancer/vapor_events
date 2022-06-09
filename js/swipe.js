@@ -61,10 +61,10 @@ swipedetect(el, function(swipedir){
         var element = document.getElementById("venueSlider");
 
         //Makes horizontal middle card active after swipe up.
-        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
-        verticalMiddleCard.style.visibility = "visible";
-        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
-        horizontalMiddleCard.style.visibility = "hidden";
+        //var verticalMiddleCard = document.getElementById("verticalMiddleCard");
+        //verticalMiddleCard.style.visibility = "visible";
+        //var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
+        //horizontalMiddleCard.style.visibility = "hidden";
 
 
         (function scrollUp(i) {
@@ -77,8 +77,8 @@ swipedetect(el, function(swipedir){
                 }
                 else{
                     element.style.top = "0vh";
-                    verticalMiddleCard.style.visibility = "hidden";
-                    horizontalMiddleCard.style.visibility = "visible";
+                    //verticalMiddleCard.style.visibility = "hidden";
+                    //horizontalMiddleCard.style.visibility = "visible";
                 }
             }, 20);
         })(1);
@@ -89,10 +89,10 @@ swipedetect(el, function(swipedir){
         var element = document.getElementById("venueSlider");
 
         //Makes horizontal middle card active after swipe up.
-        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
-        verticalMiddleCard.style.visibility = "visible";
-        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
-        horizontalMiddleCard.style.visibility = "hidden";
+        //var verticalMiddleCard = document.getElementById("verticalMiddleCard");
+        //verticalMiddleCard.style.visibility = "visible";
+        // var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
+        // horizontalMiddleCard.style.visibility = "hidden";
 
         (function scrollUp(i) {
             element.style.top = i + "px";
@@ -104,61 +104,10 @@ swipedetect(el, function(swipedir){
                 }
                 else{
                     element.style.top = "0vh";
-                    verticalMiddleCard.style.visibility = "hidden";
-                    horizontalMiddleCard.style.visibility = "visible";
+                    //verticalMiddleCard.style.visibility = "hidden";
+                    //horizontalMiddleCard.style.visibility = "visible";
                 }
             }, 20);
-        })(1);
-    }
-    else if(swipedir == "left"){
-        verticalSwipe = false;
-        horizontalSwipe = true;
-        var element = document.getElementById("eventSlider");
-
-        //Makes vertical middle card active after swipe up.
-        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
-        verticalMiddleCard.style.visibility = "hidden";
-        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
-        horizontalMiddleCard.style.visibility = "visible";
-
-
-        (function scrollLeft(i) {
-            element.style.left = -i + "vw";
-            setTimeout(function () {
-                if (i < cardWidth + cardMargin) {          // If i > 0, keep going
-                    i = i + swipeHorizontalSpeed;
-                    scrollLeft(i);       // Call the loop again, and pass it the current value of i
-                }
-                else{
-                    element.style.left = "0vw";
-                    verticalMiddleCard.style.visibility = "visible";
-                    horizontalMiddleCard.style.visibility = "hidden";
-                }
-            }, 30);
-        })(1);
-    }
-    else if(swipedir == "right"){
-        verticalSwipe = false;
-        horizontalSwipe = true;
-        var element = document.getElementById("eventSlider");
-        var verticalMiddleCard = document.getElementById("verticalMiddleCard");
-        verticalMiddleCard.style.visibility = "hidden";
-        var horizontalMiddleCard = document.getElementById("horizontalMiddleCard");
-        horizontalMiddleCard.style.visibility = "visible";
-        (function scrollRight(i) {
-            element.style.left = i + "vw";
-            setTimeout(function () {
-                if (i < cardWidth + cardMargin) {          // If i > 0, keep going
-                    i = i + swipeHorizontalSpeed;
-                    console.log(i);
-                    scrollRight(i);       // Call the loop again, and pass it the current value of i
-                }
-                else{
-                    element.style.left = "0vw";
-                    verticalMiddleCard.style.visibility = "visible";
-                    horizontalMiddleCard.style.visibility = "hidden";
-                }
-            }, 30);
         })(1);
     }
 });
